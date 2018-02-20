@@ -20,19 +20,22 @@ default: &default
   # For details on connection pooling, see Rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  host: localhost
+  username: main_user
+  password: samara
 
 development:
   <<: *default
-  database: rb_garage_a_development
+  database: base_db_development
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
   # the same name as the operating system user that initialized the database.
-  #username: rb_garage_a
+  username: main_user
 
   # The password associated with the postgres role (username).
-  #password:
+  password: samara
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
@@ -57,7 +60,9 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: rb_garage_a_test
+  database: base_db_test
+  username: main_user
+  password: samara
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -78,8 +83,3 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
-production:
-  <<: *default
-  database: rb_garage_a_production
-  username: rb_garage_a
-  password: <%= ENV['RB_GARAGE_A_DATABASE_PASSWORD'] %>

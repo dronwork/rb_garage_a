@@ -1,24 +1,21 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Task manager I'm a person who passionate about my own productivity. I want to manage my tasks and projects more effectively. I need a simple tool that supports me in controlling my task-flow Functional requirements
 
-Things you may want to cover:
+I want to be able to create/update/delete projects
 
-* Ruby version
+I want to be able to add tasks to my project
 
-* System dependencies
+I want to be able to update/delete tasks
 
-* Configuration
+I want to be able to prioritize tasks into a project
 
-* Database creation
+I want to be able to choose deadline for my task
 
-* Database initialization
+I want to be able to mark a task as 'done'
 
-* How to run the test suite
+Ruby version 2.4.1
 
-* Services (job queues, cache servers, search engines, etc.)
+Rails version 5.1.5
 
-* Deployment instructions
-
-* ...
+Database Postgres
