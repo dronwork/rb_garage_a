@@ -26,6 +26,8 @@ class ProjectsController < ApplicationController
   def create
     @project = Project.new(project_params)
 
+    @project = current_user.projects.new
+
 
     respond_to do |format|
       if @project.save
